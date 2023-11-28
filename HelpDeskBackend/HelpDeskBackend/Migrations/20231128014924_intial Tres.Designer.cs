@@ -74,7 +74,7 @@ namespace HelpDeskBackend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ResolvedById")
+                    b.Property<string>("ResolvedBy")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TicketId")
