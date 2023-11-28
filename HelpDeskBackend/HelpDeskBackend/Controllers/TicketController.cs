@@ -5,7 +5,7 @@ using HelpDeskBackend.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HelpDeskBackend.Controllers;
-[Route("HelpDeskApi/[controller]")]
+[Route("api/[controller]")]
 [ApiController]
 public class TicketController : ControllerBase
 {

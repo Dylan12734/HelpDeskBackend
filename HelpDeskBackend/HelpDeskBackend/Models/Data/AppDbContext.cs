@@ -1,5 +1,6 @@
 ﻿using HelpDeskBackend.Models.DTO;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace HelpDeskBackend.Models.Data
 {
@@ -11,6 +12,6 @@ namespace HelpDeskBackend.Models.Data
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Favorites> Favorites { get; set; }
 
-        
+       
     }
 }
