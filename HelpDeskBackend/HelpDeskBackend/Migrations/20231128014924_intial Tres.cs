@@ -37,7 +37,7 @@ namespace HelpDeskBackend.Migrations
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     OpenedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ResolvedById = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ResolvedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     isActive = table.Column<bool>(type: "bit", nullable: false)
