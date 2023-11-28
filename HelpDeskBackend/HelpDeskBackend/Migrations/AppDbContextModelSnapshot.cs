@@ -68,11 +68,12 @@ namespace HelpDeskBackend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("OpenedById")
-                        .HasColumnType("int");
+                    b.Property<string>("OpenedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ResolvedById")
-                        .HasColumnType("int");
+                    b.Property<string>("ResolvedById")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TicketId")
                         .HasColumnType("int");

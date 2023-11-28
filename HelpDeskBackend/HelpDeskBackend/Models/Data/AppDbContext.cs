@@ -12,6 +12,5 @@ namespace HelpDeskBackend.Models.Data
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Favorites> Favorites { get; set; }
 
-       
     }
 }

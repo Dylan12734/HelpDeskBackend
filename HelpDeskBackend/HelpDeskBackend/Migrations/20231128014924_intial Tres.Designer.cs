@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HelpDeskBackend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231127031700_initial Migration")]
-    partial class initialMigration
+    [Migration("20231128014924_intial Tres")]
+    partial class intialTres
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -70,11 +70,12 @@ namespace HelpDeskBackend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("OpenedById")
-                        .HasColumnType("int");
+                    b.Property<string>("OpenedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ResolvedById")
-                        .HasColumnType("int");
+                    b.Property<string>("ResolvedById")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TicketId")
                         .HasColumnType("int");

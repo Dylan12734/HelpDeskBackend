@@ -6,8 +6,8 @@ namespace HelpDeskBackend.Models
         public int TicketId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public int OpenedById { get; set; }
-        public int? ResolvedById { get; set; }
+        public string OpenedBy { get; set; }
+        public string? ResolvedBy { get; set; }
     }
 
 }

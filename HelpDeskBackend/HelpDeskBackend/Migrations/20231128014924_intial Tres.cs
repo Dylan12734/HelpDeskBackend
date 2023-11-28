@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace HelpDeskBackend.Migrations
 {
-    public partial class initialMigration : Migration
+    public partial class intialTres : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -36,8 +36,8 @@ namespace HelpDeskBackend.Migrations
                     TicketId = table.Column<int>(type: "int", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    OpenedById = table.Column<int>(type: "int", nullable: false),
-                    ResolvedById = table.Column<int>(type: "int", nullable: true),
+                    OpenedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ResolvedById = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     isActive = table.Column<bool>(type: "bit", nullable: false)
