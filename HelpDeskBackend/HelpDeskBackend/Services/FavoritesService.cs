@@ -1,6 +1,5 @@
 ﻿using HelpDeskBackend.Models;
 using HelpDeskBackend.Models.Data;
-using HelpDeskBackend.Models.DTO;
 
 namespace HelpDeskBackend.Services
 {
@@ -34,7 +33,7 @@ namespace HelpDeskBackend.Services
         }
         public Favorites GetFavoritesByFavoritesId(int id, AppDbContext _context)
         {
-            Favorites favorites = _context.Favorites.Where(x=> x.Id == id).FirstOrDefault();
+            Favorites favorites = _context.Favorites.Where(x => x.Id == id).FirstOrDefault();
             return favorites;
         }
         public void UpdateFavorite(Favorites favorite)
@@ -46,11 +45,11 @@ namespace HelpDeskBackend.Services
         }
         public void DeleteFavorite(int id)
         {
-            var favorite = _context.Favorites.Where(f=> f.Id == id).FirstOrDefault();
+            var favorite = _context.Favorites.Where(f => f.Id == id).FirstOrDefault();
             if (favorite != null)
             {
                 favorite.isActive = false;
-                favorite.UpdatedDate= DateTime.UtcNow;
+                favorite.UpdatedDate = DateTime.UtcNow;
 
                 _context.Favorites.Update(favorite);
                 _context.SaveChanges();

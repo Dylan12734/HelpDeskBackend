@@ -1,10 +1,6 @@
-﻿
-
-using System.Net.Sockets;
-
-namespace HelpDeskBackend.Models
+﻿namespace HelpDeskBackend.Models
 {
-    public class Favorites: BaseEntity
+    public class Favorites : BaseEntity
     {
         public int FavoritesId { get; set; }
         public int UserId { get; set; }

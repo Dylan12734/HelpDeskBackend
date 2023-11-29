@@ -1,6 +1,5 @@
 ﻿using HelpDeskBackend.Models;
 using HelpDeskBackend.Models.Data;
-using HelpDeskBackend.Models.DTO;
 
 namespace HelpDeskBackend.Services
 {
@@ -14,11 +13,11 @@ namespace HelpDeskBackend.Services
         }
         public IEnumerable<Ticket> GetAllTickets()
         {
-            return _context.Tickets.Where(t=> t.isActive).ToList();
+            return _context.Tickets.Where(t => t.isActive).ToList();
         }
         public Ticket GetTicketById(int id)
         {
-            return _context.Tickets.FirstOrDefault(t=> t.Id == id && t.isActive);
+            return _context.Tickets.FirstOrDefault(t => t.Id == id && t.isActive);
         }
         public void AddTicket(Ticket ticket)
         {
@@ -41,7 +40,7 @@ namespace HelpDeskBackend.Services
             if (ticket != null)
             {
                 ticket.isActive = false;
-                ticket.UpdatedDate= DateTime.UtcNow;
+                ticket.UpdatedDate = DateTime.UtcNow;
 
                 _context.Tickets.Update(ticket);
                 _context.SaveChanges();

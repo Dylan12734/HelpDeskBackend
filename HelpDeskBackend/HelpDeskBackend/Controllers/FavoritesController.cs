@@ -13,9 +13,10 @@ namespace HelpDeskBackend.Controllers
         private readonly FavoritesService _favoritesService;
         private readonly IMapper _mapper;
 
-        public FavoritesController(FavoritesService favoritesService)
+        public FavoritesController(FavoritesService favoritesService, IMapper mapper)
         {
             _favoritesService = favoritesService;
+            _mapper = mapper;
         }
 
         [HttpPost]
